@@ -4,7 +4,7 @@
 	define('__CONFIG__', true);
 
 	// Require the config
-	require_once "../inc/config.php"; 
+	require_once "../inc/config.php";
 
 	if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		// Always return JSON format
@@ -38,7 +38,7 @@
 			$return['redirect'] = '/dashboard.php?message=welcome';
 			$return['is_logged_in'] = true;
 		}
-
+		echo "Status code is" ;
 		echo json_encode($return, JSON_PRETTY_PRINT); exit;
 	} else {
 		// Die. Kill the script. Redirect the user. Do something regardless.
